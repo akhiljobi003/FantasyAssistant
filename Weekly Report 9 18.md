@@ -20,11 +20,11 @@ N/A
 * I want to start developing the drafting simulation portion of our program
  * Pull list of names from a database, check if the name given is in the list, then add to another list (teams) and pop from original list if chosen
 ### Akhil
-*** Section 1**
+**Section 1**
 N/A
-*** Section 2**
+**Section 2**
 * Worked on the requirment
 * Added my use cases
 * Identified roles
-* Section 3
+**Section 3**
 * Worked on weekly report
