@@ -22,9 +22,9 @@ N/A
 ### Akhil
 **Section 1**
 N/A
-**Section 2**
+##**Section 2**
 * Worked on the requirment
 * Added my use cases
 * Identified roles
-**Section 3**
+##**Section 3**
 * Worked on weekly report
