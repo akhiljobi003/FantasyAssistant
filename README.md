@@ -17,16 +17,16 @@
 * Generation of visualizations 
 ### Stretch Goals: 
 * Models to apply to multiple sports 
-*Increasing model accuracy 
+* Increasing model accuracy 
 ## 3. Use Cases 
 ### Use Case: Draft Team in Fantasy Sports 
 * Goal In Context: Enable a user to draft an optimal team for their fantasy sports league using AI-assisted recommendations.  
 * Scope: Fantasy Sports Draft Assistant System 
 * Level: User Goal 
 * Preconditions 
- * User has access to AI systems.  
- * League settings and scoring rules are configured. 
- * Draft has been initiated.  
+    * User has access to AI systems.  
+    * League settings and scoring rules are configured. 
+    * Draft has been initiated.  
 * Success End Condition: User has successfully drafted a complete team that adheres to league rules and maximizes potential points based on AI recommendations. 
 * Failed End Condition: Draft is incomplete, team violates league rules, or user is unsatisfied with the drafted team. 
 * Primary Actor: Fantasy Sports Player 
@@ -41,28 +41,28 @@
 7. Steps 1-6 repeat until the user's team is complete. 
 Extensions:  
 * 2a. Unable to analyze league rules or player data: 
- * System notifies user of the issue. 
- * System provides option to proceed with limited functionality or contact support. 
+    * System notifies user of the issue. 
+    * System provides option to proceed with limited functionality or contact support. 
 * 3a. No suitable recommendations available: 
- * System informs user and suggests broadening search criteria. 
+    * System informs user and suggests broadening search criteria. 
 * 5a. User disagrees with recommendations: 
- * User requests alternative recommendations. 
- * System generates new recommendations based on adjusted criteria. 
- * Return to step 4. 
+    * User requests alternative recommendations. 
+    * System generates new recommendations based on adjusted criteria. 
+    * Return to step 4. 
 * 5b. User's preferred player is already drafted: 
- * System alerts user and suggests alternatives. 
- * Return to step 4. 
+    * System alerts user and suggests alternatives. 
+    * Return to step 4. 
 * 6a. Selected player violates league rules (e.g., salary cap, roster limits): 
- * System warns user of the violation. 
- * System suggests alternatives that comply with rules. 
- * Return to step 4. 
+    * System warns user of the violation. 
+    * System suggests alternatives that comply with rules. 
+    * Return to step 4. 
 ### Use Case: Trading Players in Fantasy Sports 
 * Goal In Context: Enable a user to swap players for another player.  
 * Scope: Fantasy Sports Draft Assistant System 
 * Level: User Goal 
 * Preconditions 
- * User has access to AI system 
- * Draft has been initiated or completed.  
+    * User has access to AI system 
+    * Draft has been initiated or completed.  
 * Success End Condition: User has successfully completed a trade of players or swapped a player.  
 * Failed End Condition: User is unable to swap a player onto their team for some reason (e.g., other player denies trade offer, player unavailable) 
 * Primary Actor: Fantasy Sports Player 
@@ -75,16 +75,16 @@ Extensions:
 5. If User 2 denies the trade offer, close the trade offer.  
 * Extensions: 
 * 2a. Selected players violate league rules (e.g., salary cap, roster limits): 
- * System warns user of the violation. 
- * System suggests alternatives that comply with rules. 
- * Return to step 1.  
+    * System warns user of the violation. 
+    * System suggests alternatives that comply with rules. 
+    * Return to step 1.  
 ### Use Case: Waiver Wire Analysis 
 * Goal In Context: Enables users to pick up the best available players and drop a player from your team 
 * Scope: Fantasy Sports Draft Assistant System 
 * Level: User Goal 
 * Preconditions:   
- * The players to be picked up is available in the waiver wire  
- * The user has an available roster spot or a player they are willing to drop 
+    * The players to be picked up is available in the waiver wire  
+    * The user has an available roster spot or a player they are willing to drop 
 * Succes End Condition: The user was successfully able to pick up a player from the waiver wire  
 * Failed End Conditions: The user wasn't able to pick up the player they put in claim from the waiver wire  
 * Primary Actor: Fantasy Sports player  
@@ -95,15 +95,15 @@ Extensions:
 3. The user adds the player or put the claim in the for the player, and click the drop button from roster they want to drop  
 4. The system asks for the confirmation for the selections that they choose, and they update the roster  
 * Extensions:  
- * The selected player is no longer available in the waiver wire list because it was picked by another team  
- * The users team roster is full and they don't want to drop any players from the roster 
+    * The selected player is no longer available in the waiver wire list because it was picked by another team  
+    * The users team roster is full and they don't want to drop any players from the roster 
 ### Use Case: Lineup Optimization 
 * Goal In Context: Enables user to put the best lineup each week 
 * Scope: Fantasy Basketball Assistant System 
 * Level: User Goal 
 * Precondition:  
- * Users team and player stats are loaded into the analyzer 
- * League scoring system must be understood by the analyzer 
+    * Users team and player stats are loaded into the analyzer 
+    * League scoring system must be understood by the analyzer 
 * Success End Condition: User has updated lineup to the best potential based on projections and Analyzer suggestions 
 * Failed End Condition: Analyzer receives outdated, or wrong player data and user does not create the best possible lineup 
 * Primary Actor: Fantasy Sports Player 
@@ -115,16 +115,16 @@ Extensions:
 4. Present lineup to user and provide rationale behind the recommendations 
 5. User can review recommendations and make necessary adjustments 
 * Extensions: 
- * Analyzer can handle changes to lineup such as injuries, trades or other mid season adjustments 
- * Incorporate user preferences for specific players 
- * Provide new recommendations in response to new information or last-minute injury reports 
+    * Analyzer can handle changes to lineup such as injuries, trades or other mid season adjustments 
+    * Incorporate user preferences for specific players 
+    * Provide new recommendations in response to new information or last-minute injury reports 
 ### Use Case: Injury Management 
 * Goal In Context: Enable players to be substituted when they are injured 
 * Scope: Fantasy Sports Draft Assistant System 
 * Level: User Goal  
 * Preconditions: 
- * System notifies user that their is an injured player in the starting lineup 
- * User picks and substitutes a player from available bench players 
+    * System notifies user that their is an injured player in the starting lineup 
+    * User picks and substitutes a player from available bench players 
 * Success End Condition: User substituted an injured player successfully  
 * Failed End Condition: substituted player might not be the best in statistical stand point, compared to the injured player 
 * Primary Actor: Fantasy Sports Player 
