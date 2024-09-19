@@ -18,7 +18,7 @@ N/A
 * I laid out the goals for the team (see Team Report, section 3)
 #### Section 3 (next week)
 * I want to start developing the drafting simulation portion of our program
-    * Pull list of names from a database, check if the name given is in the list, then add to another list (teams) and pop from original list if chosen
+* Pull list of names from a database, check if the name given is in the list, then add to another list (teams) and pop from original list if chosen
 ### Akhil
 #### Section 1 (what did you do last week)
 N/A
@@ -32,8 +32,8 @@ N/A
 #### Section 1 (what did you do last week) 
 N/A
 #### Section 2 (what did you do this week) 
-*Worked on the requirements, figured out what my role is in this porject 
-*worked on weekly report
-#### Section 3 (NExt week)
+* Worked on the requirements, figured out what my role is in this porject 
+* Worked on weekly report
+#### Section 3 (Next week)
 * Look to finding simple desgins and intuitive navigation for the program
 * working on responsive layouts 
