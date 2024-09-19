@@ -37,3 +37,15 @@ N/A
 #### Section 3 (Next week)
 * Look to finding simple desgins and intuitive navigation for the program
 * working on responsive layouts 
+### Yohanse
+#### Section 1 (Last week)
+N/A
+#### Section 2(what did you do this week)
+* worked on the requirements, use case
+* decided what role each of us going to take as a team
+* in addition to the class lecture, tried to understand what scrum is as a scrum master role
+* worked on weekly report
+#### Section 3 (Next week)
+* Managing, planning, and organizing what steps to take to continue our progress
+* Understand what best resource we need to use to develop our project
+* Analyze what potential obstacles we could face through out the project 
