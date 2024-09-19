@@ -55,7 +55,6 @@ N/A
 ### Section 2(what did you do this week)
 * worked on the requirements
 * decided what role each of us going to take as a team
-* In addition checked how to optimize code for perfomance.
 #### Section 3 (Next week)
 * Managing, planning, and organizing the necessary steps to maintain our progress.
 * Working on how to design system 
