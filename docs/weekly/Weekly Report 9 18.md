@@ -28,3 +28,12 @@ N/A
 #### Section 3 (next week)
 * Look into NBA databases to pull our data from making sure its up to date and accurate
 * Use public API to retrieve the data
+### Mahir
+#### Section 1 (what did you do last week) 
+N/A
+#### Section 2 (what did you do this week) 
+*Worked on the requirements, figured out what my role is in this porject 
+*worked on weekly report
+#### Section 3 (NExt week)
+* Look to finding simple desgins and intuitive navigation for the program
+* working on responsive layouts 
