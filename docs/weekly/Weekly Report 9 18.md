@@ -48,4 +48,15 @@ N/A
 #### Section 3 (Next week)
 * Managing, planning, and organizing what steps to take to continue our progress
 * Understand what best resource we need to use to develop our project
-* Analyze what potential obstacles we could face through out the project 
+* Analyze what potential obstacles we could face through out the project
+### Syed 
+### Section 1 (Last week)
+N/A
+### Section 2(what did you do this week)
+* worked on the requirements
+* decided what role each of us going to take as a team
+* In addition checked how to optimize code for perfomance.
+#### Section 3 (Next week)
+* Managing, planning, and organizing the necessary steps to maintain our progress.
+* Working on how to design system 
+* Evaluate potential challenges we may encounter throughout the project.
