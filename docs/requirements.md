@@ -4,9 +4,9 @@
 * Yohanse Nurga  - Scrum Master 
 * Akhil Jobi – Database Manager 
 * Mahir Sadique – Frontend Developer  
-* Syed - Backend  
+* Syed - Backend Developer
 ### Relevant Artifacts
-* Lasagnah/FantasyAssistant · GitHub 
+* [Lasagnah/FantasyAssistant · GitHub](https://github.com/Lasagnah/FantasyAssistant) 
 ### Communication Channels 
 * FantasyAssistant Discord Channel 
 ## 2. Product Description 
@@ -140,6 +140,26 @@ Extensions:
 * If a user’s input does not match any of the previous inputs, then the user will be notified, and they will continue drafting.  
 * The product should be a basic python script with a few extra files/folders attached to make it easily runnable.  
 ## 6. Team Process Description  
-* Toolsets we are going to be using includes Python, Pytorch, LLM packages, and Data Science packages.  
-
- 
+### Tools
+* Tools we are going to be using includes Python, Pytorch, LLM packages, and Data Science packages, as well as PostgreSQL for our database. 
+    * We will be using Python because it is the easiest programming language for what we are trying to accomplish. 
+    * We will be using Pytorch, LLM packages, and Data Science packages to make it easier to implement the things they are associated with, so that we don't have to create the things from scratch. 
+    * We will be using PostgreSQL for our database because its easy and open source. It's starting to become an industry standard. 
+### Team member roles
+* Lily's role is the Product Owner, her job is to help define what goes into the product. She also is helping with development where she can. She chose this role because she was the one to pitch this product, so she already had a view for what the product would be. The team needs this role filled to have a solid way forward and a solid list of goals for development. 
+* Yohanse's role is the Scrummaster, his job is to help the developers be able to do what they need to do. 
+* Akhil's role is the Database Manager, his job is to create and manage the database and datasystems.
+* Mahir's role is the Frontend developer, his job is to create the way that the user interacts with our program.
+* Syed's role is the Backend developer, his job is to create the way that our program responds to the input from the user. 
+### Schedule
+* Developer's Schedule
+    * Create system infrastructure by October 4th.
+    * Create system database by October 4th. 
+    * Train system by October 25th.
+    * Create LLM by November 29th.
+    * Process external feedback December 6th.
+### Risks
+* The biggest risk has to do with our data. If we don't have a good dataset or way of storing our data, our product just can't really work well or in some cases even at all. 
+* Another potential risk has to do with 
+### External Feedback
+* We will be processing external feedback the week of December 6th, which is basically after we have most of our product finished. We do this then because at that point, we have everything set up and we are able to easily incorporate feedback that doesnt fundamentally change how our program works. We would incorporate things that would potentially require us to retrain our models, but that would probably be the most significant. 
