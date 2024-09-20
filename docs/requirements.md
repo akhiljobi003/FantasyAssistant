@@ -148,7 +148,7 @@ Extensions:
 ### Team member roles
 * Lily's role is the Product Owner, her job is to help define what goes into the product. She also is helping with development where she can. She chose this role because she was the one to pitch this product, so she already had a view for what the product would be. The team needs this role filled to have a solid way forward and a solid list of goals for development. 
 * Yohanse's role is the Scrummaster, his job is to help the developers be able to do what they need to do. 
-* Akhil's role is the Database Manager, his job is to create and manage the database and datasystems.
+* Akhil's role is the Database Manager, his job is to create and manage the database and datasystems. He has to make sure the data is up to date and accurate, and the developers can understand how to integrate data and ensure data consistency across systems. He chose this role because it is a crucial part of this project since we will be using a lot of data from various different databases, and he can grow his knowledge about implementing effective database queries. The team needs this role filled because this project revolves around efficiently managing vast amounts of data, and a database manager ensure data consistency and accuracy.
 * Mahir's role is the Frontend developer, his job is to create the way that the user interacts with our program.
 * Syed's role is the Backend developer, his job is to create the way that our program responds to the input from the user. 
 ### Schedule
@@ -160,6 +160,7 @@ Extensions:
     * Process external feedback December 6th.
 ### Risks
 * The biggest risk has to do with our data. If we don't have a good dataset or way of storing our data, our product just can't really work well or in some cases even at all. 
-* Another potential risk has to do with 
+* Another potential risk has to do with the data being inacurrate or outdated which could lead to bad recommendations. Even if a player is injured or traded and the data isn't updated, it can make our system unreliable.
+* Another risk can be trying to add too much features to our product which can lead us to missed deadline and losing focus on the main idea. With features such as advanced analytics, and custom tools it can be tempting to include all of these, so it's crucial to proritize key features.
 ### External Feedback
 * We will be processing external feedback the week of December 6th, which is basically after we have most of our product finished. We do this then because at that point, we have everything set up and we are able to easily incorporate feedback that doesnt fundamentally change how our program works. We would incorporate things that would potentially require us to retrain our models, but that would probably be the most significant. 
