@@ -1,2 +1,2 @@
-from ..src import draft
-draft.draft_players()
+from ..src import draft_players
+draft_players()

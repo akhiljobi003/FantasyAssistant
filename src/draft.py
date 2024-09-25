@@ -29,7 +29,7 @@ def draft_players():
     # available_players = c.fetchall()
 
     # Add some test players
-    available_players = ["1", "2",'3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24', '25']
+    available_players = ["1","2",'3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24', '25']
 
     # Initialize the draft order
     round_count = 0
@@ -44,7 +44,20 @@ def draft_players():
         print(f"\nRound {round_count + 1}:")
         for team in range(player_num):
             if available_players:
-                player = available_players.pop(0)
+                desired = ''
+
+                # Loop to make it so that we get a response that qwe understand
+                while True:
+                    print(f"Team {team+1}, What player would you like to select?")
+                    desired = input()
+                    if desired in available_players:
+                        break
+                    else:
+                        print("Error, player not available or something went wrong, choose again.")
+                
+                # Update the players, remove them from the available list, update the rosters
+                player = desired
+                available_players.remove(desired)
                 print(f"Team {team+1} selects {player}.")
                 teamlist[team][round_count] = player
         round_count += 1
@@ -58,3 +71,5 @@ def draft_players():
             print(player)
     # Close the database connection
     # conn.close()
+
+draft_players()
