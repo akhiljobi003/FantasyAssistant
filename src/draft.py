@@ -1,6 +1,14 @@
 import sqlite3
 import random
 
+'''
+TODO: 
+User chooses player
+Check for valid input
+Connect to database and fetch
+Snake order?
+'''
+
 # Connect to the database
 # conn = sqlite3.connect('players.db')
 # c = conn.cursor()
@@ -26,10 +34,9 @@ def draft_players():
     # Initialize the draft order
     round_count = 0
 
-    print("How many players would you like to play with?")
-    player_num = int(input())
+    player_num = int(input("How many players would you like to play with?"))
     # Create a matrix of teams, 6 is arbitrary
-    teamlist = [player_num][6]
+    teamlist = [[0 for x in range(6)] for y in range(player_num)]
 
     # Start the draft
     print("Welcome to the Player Draft!")
@@ -38,14 +45,14 @@ def draft_players():
         for team in range(player_num):
             if available_players:
                 player = available_players.pop(0)
-                print(f"Team {team} selects {player}.")
+                print(f"Team {team+1} selects {player}.")
                 teamlist[team][round_count] = player
         round_count += 1
 
     print("\nHere are the teams\n")
     team_num = 1
     for team in teamlist:
-        print("Team {teamnum}:")
+        print(f"Team {team_num}:")
         team_num += 1
         for player in team:
             print(player)
