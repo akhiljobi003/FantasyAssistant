@@ -1,3 +1,3 @@
-__all__ = ["draft"]
+import draft
 
-from .draft import draft_players
+__all__ = ["draft"]

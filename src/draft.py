@@ -1,10 +1,7 @@
 import sqlite3
-import random
 
 '''
 TODO: 
-User chooses player
-Check for valid input
 Connect to database and fetch
 Snake order?
 '''
@@ -31,10 +28,19 @@ def draft_players():
     # Add some test players
     available_players = ["1","2",'3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24', '25']
 
+    player_num = 0
     # Initialize the draft order
     round_count = 0
+    while True:
+        input_var = input(input("How many players would you like to play with?"))
+        
+        if (input_var.isdigit()):
+            player_num = input_var
+            break
+        else:
+            print("An error occurred.")
 
-    player_num = int(input("How many players would you like to play with?"))
+
     # Create a matrix of teams, 6 is arbitrary
     teamlist = [[0 for x in range(6)] for y in range(player_num)]
 
@@ -71,5 +77,3 @@ def draft_players():
             print(player)
     # Close the database connection
     # conn.close()
-
-draft_players()
