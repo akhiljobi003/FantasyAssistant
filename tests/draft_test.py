@@ -1,4 +1,3 @@
-from FantasyAssistant.src.draft import draft_players
-import pytest
+from ..src import draft
 
-draft_players()
+draft.draft_players()
