@@ -32,10 +32,11 @@ def draft_players():
     # Initialize the draft order
     round_count = 0
     while True:
-        input_var = input(input("How many players would you like to play with?"))
-        
+        input_var = input("How many players would you like to play with?")
+        if input_var == 'exit':
+            return
         if (input_var.isdigit()):
-            player_num = input_var
+            player_num = int(input_var)
             break
         else:
             print("An error occurred.")
@@ -56,6 +57,8 @@ def draft_players():
                 while True:
                     print(f"Team {team+1}, What player would you like to select?")
                     desired = input()
+                    if desired == "exit":
+                        return
                     if desired in available_players:
                         break
                     else:
@@ -68,7 +71,7 @@ def draft_players():
                 teamlist[team][round_count] = player
         round_count += 1
 
-    print("\nHere are the teams\n")
+    print("Here are the teams")
     team_num = 1
     for team in teamlist:
         print(f"Team {team_num}:")
@@ -77,3 +80,5 @@ def draft_players():
             print(player)
     # Close the database connection
     # conn.close()
+
+draft_players()
