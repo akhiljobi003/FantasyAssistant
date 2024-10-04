@@ -1,84 +1,76 @@
-import sqlite3
+from databse import get_player_data, setup_database
 
-'''
-TODO: 
-Connect to database and fetch
-Snake order?
-'''
 
-# Connect to the database
-# conn = sqlite3.connect('players.db')
-# c = conn.cursor()
+def calculate_player_score(player):
+    ppg = player['points_per_game']
+    rpg = player['rebounds_per_game']
+    apg = player['assists_per_game']
+    return ppg + 1.2 * rpg + 1.5 * apg
 
-# Define the draft function
+
 def draft_players():
-    '''
-    This function will simulate the drafting of players
-    It will connect to a database
-    Fetch a list of players from the database (available_players)
-    Then it will start the draft
-        The system will prompt the user to enter a player's name, if needed it can print the players available
-        If the user chooses a player, and it is a valid input, it will add it to an array of the specific user's team, and go to the next user
-        Repeat for X number of rounds
-    '''
-    # Get the list of available players from the database
-    # c.execute("SELECT name, position, team, points FROM players")
-    # available_players = c.fetchall()
+    available_players = get_player_data()
 
-    # Add some test players
-    available_players = ["1","2",'3','4','5','6','7','8','9','10','11','12','13','14','15','16','17','18','19','20','21','22','23','24', '25']
-
-    player_num = 0
-    # Initialize the draft order
-    round_count = 0
     while True:
-        input_var = input("How many players would you like to play with?")
-        if input_var == 'exit':
-            return
-        if (input_var.isdigit()):
+        input_var = input("How many players would you like to play with? ")
+        if input_var.isdigit():
             player_num = int(input_var)
             break
         else:
-            print("An error occurred.")
+            print("An error occurred. Please enter a valid number.")
 
+    teams = [[] for _ in range(player_num)]
 
-    # Create a matrix of teams, 6 is arbitrary
-    teamlist = [[0 for x in range(6)] for y in range(player_num)]
-
-    # Start the draft
-    print("Welcome to the Player Draft!")
-    while available_players and round_count < 6:
+    print("Welcome to the NBA Fantasy Draft!")
+    round_count = 0
+    while available_players and round_count < 10:
         print(f"\nRound {round_count + 1}:")
-        for team in range(player_num):
-            if available_players:
-                desired = ''
+        order = range(player_num) if round_count % 2 == 0 else range(player_num - 1, -1, -1)
 
-                # Loop to make it so that we get a response that qwe understand
+        for team in order:
+            if available_players:
+                print(f"\nTeam {team + 1}, it's your turn to draft.")
+
+                sorted_players = sorted(available_players, key=calculate_player_score, reverse=True)
+
+                print("Top 5 available players:")
+                for i, player in enumerate(sorted_players[:5]):
+                    score = calculate_player_score(player)
+                    print(
+                        f"{i + 1}. {player['name']} ({player['team']}) - PPG: {player['points_per_game']:.1f}, RPG: {player['rebounds_per_game']:.1f}, APG: {player['assists_per_game']:.1f}, Score: {score:.1f}")
+
+                suggested_player = sorted_players[0]
+                print(
+                    f"\nSuggested pick: {suggested_player['name']} (Score: {calculate_player_score(suggested_player):.1f})")
+
                 while True:
-                    print(f"Team {team+1}, What player would you like to select?")
-                    desired = input()
-                    if desired == "exit":
-                        return
-                    if desired in available_players:
+                    choice = input("Enter the number of the player you want to draft (or 's' to see more players): ")
+                    if choice.lower() == 's':
+                        print("\nAll available players:")
+                        for i, player in enumerate(sorted_players):
+                            score = calculate_player_score(player)
+                            print(
+                                f"{i + 1}. {player['name']} ({player['team']}) - PPG: {player['points_per_game']:.1f}, RPG: {player['rebounds_per_game']:.1f}, APG: {player['assists_per_game']:.1f}, Score: {score:.1f}")
+                    elif choice.isdigit() and 0 < int(choice) <= len(available_players):
+                        index = int(choice) - 1
+                        drafted_player = sorted_players[index]
+                        available_players.remove(drafted_player)
+                        teams[team].append(drafted_player)
+                        print(f"Team {team + 1} drafts {drafted_player['name']}.")
                         break
                     else:
-                        print("Error, player not available or something went wrong, choose again.")
-                
-                # Update the players, remove them from the available list, update the rosters
-                player = desired
-                available_players.remove(desired)
-                print(f"Team {team+1} selects {player}.")
-                teamlist[team][round_count] = player
+                        print("Invalid choice. Please try again.")
+
         round_count += 1
 
-    print("Here are the teams")
-    team_num = 1
-    for team in teamlist:
-        print(f"Team {team_num}:")
-        team_num += 1
+    print("\nDraft Results:")
+    for i, team in enumerate(teams):
+        print(f"\nTeam {i + 1}:")
         for player in team:
-            print(player)
-    # Close the database connection
-    # conn.close()
+            print(
+                f"  {player['name']} ({player['team']}) - PPG: {player['points_per_game']:.1f}, RPG: {player['rebounds_per_game']:.1f}, APG: {player['assists_per_game']:.1f}")
 
-draft_players()
+
+if __name__ == "__main__":
+    setup_database()  # Update the database before starting the draft
+    draft_players()
