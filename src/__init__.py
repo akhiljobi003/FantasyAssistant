@@ -1,3 +1,6 @@
-import draft
+from databse import setup_database
+from draft import draft_players
 
-__all__ = ["draft"]
+if __name__ == "__main__":
+    setup_database()
+    draft_players()
