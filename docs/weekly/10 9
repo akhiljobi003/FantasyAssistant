@@ -5,15 +5,16 @@
 * Developed database creation 
 #### Section 2 (what did you do this week)
 * Continue to make sure database is updated and connect to it
+* Started to plan out how the prediction algorithm will work
 #### Section 3 (next week)
 * Continue to work on making sure database is working as needed
 * We should start to develop other use cases (Trade Analyzer, Waiver Wire, Injury, Lineup)
 ## Individual Contributions
 ### Lily
 #### Section 1 (what did you do last week)
-* Developed a prototype of our drafting program
-#### Section 2 (what did you do this week)
 * I tried to write some tests for our drafting program and connect it to a database.
+#### Section 2 (what did you do this week)
+* I did a bunch of research on the prediction algorithm and what kind of algorithm it will use (Markov decision process)
 #### Section 3 (next week)
 * Next week I want to start setting up the prediction algorithm for the games.
 ### Akhil
