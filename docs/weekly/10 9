@@ -1,1 +1,54 @@
-
+# Project Weekly Report
+## Team Report
+#### Section 1 (what did you do last week)
+* Developed a drafting simulation program
+* Developed database creation 
+#### Section 2 (what did you do this week)
+* Continue to make sure database is updated and connect to it
+#### Section 3 (next week)
+* Continue to work on making sure database is working as needed
+* We should start to develop other use cases (Trade Analyzer, Waiver Wire, Injury, Lineup)
+## Individual Contributions
+### Lily
+#### Section 1 (what did you do last week)
+* Developed a prototype of our drafting program
+#### Section 2 (what did you do this week)
+* I tried to write some tests for our drafting program and connect it to a database.
+#### Section 3 (next week)
+* Next week I want to start setting up the prediction algorithm for the games.
+### Akhil
+#### Section 1 (what did you do last week)
+* Scrape data from web using Basketball Reference website
+* Created the database using sqlite which has over 500 players 
+#### Section 2 (what did you do this week)
+* Continue to improve the layot of database making sure all data is accurate
+* Connected database to draft simulation code and test it
+#### Section 3 (next week)
+* Continue to enhance data quality and consistency
+* Connect the database to other use case when we create codes for them
+### Mahir
+#### Section 1 (what did you do last week) 
+* Look to finding simple designs and intuitive navigation for the program
+* Working on responsive layouts
+#### Section 2 (what did you do this week) 
+* Assisted akhil on making fantasy nba mock draft that was linked to a database with over 500 players
+#### Section 3 (Next week)
+* Continue adding more features on the mock draft, that tells user who to draft based on suggestions 
+### Yohanse
+#### Section 1 (Last week)
+* Checked on the progress with the team
+* Worked on the weekly report
+#### Section 2(what did you do this week)
+* Talked to the team on what our progress looks like so far
+#### Section 3 (Next week)
+* Talk to the team on how what our progress looks like so far
+* Planning to discuss what tools to add in building our fantasy assistance while building the prediction algorithm.
+* Find ways to be more efficient in progressing the project
+### Syed 
+### Section 1 (Last week)
+* did research on what languages to use to work on the backend part of project.
+### Section 2(what did you do this week)
+* Continued to research and finalize the language and framework to use for the backend.
+#### Section 3 (Next week)
+* Collaborate with Akhil to integrate the backend with the database and ensure smooth data flow.
+* Begin implementing the backend logic and services.
