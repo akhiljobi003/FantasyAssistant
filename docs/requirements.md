@@ -154,7 +154,9 @@ Extensions:
 * Mahir's role is the Frontend Developer, responsible for creating the interface that the user interacts with in the program. His job is to design and implement a simple UI that asks for input, ensuring that the user experience is intuitive and smooth. The team needs this role filled because the success of the project depends on having a user-friendly interface that facilitates interaction with the system.
 * Syed's role is the Backend developer, his job is to create the way that our program responds to the input from the user. 
 ### Documentation Plan
-
+* Within the Docs folder, we will create a guide.md file which is a guide for the functionality for the user. 
+    * Includes examples of importing drafts, and running drafts
+    * Includes examples of interacting with the LLM and game prediction algorithm
 ### Schedule
 * Developer's Schedule
     * Create system infrastructure by October 4th.
@@ -164,11 +166,9 @@ Extensions:
     * Process external feedback December 6th.
 ### Risks
 * The biggest risk has to do with our data. If we don't have a good dataset or way of storing our data, our product just can't really work well or in some cases even at all. 
-* Another potential risk has to do with the data being inacurrate or outdated which could lead to bad recommendations. Even if a player is injured or traded and the data isn't updated, it can make our system unreliable.
-* Another risk can be trying to add too much features to our product which can lead us to missed deadline and losing focus on the main idea. With features such as advanced analytics, and custom tools it can be tempting to include all of these, so it's crucial to proritize key features.
-* If the UI does not properly validate user inputs (like incorrect formats or missing data), this can lead to errors in the backend or incorrect data processing, affecting the overall system reliability.
-### Risk assessment
-
+* Another potential risk has to do with the data being inacurrate or outdated which could lead to bad recommendations. Even if a player is injured or traded and the data isn't updated, it can make our system unreliable. 
+* Another risk can be trying to add too much features to our product which can lead us to missed deadline and losing focus on the main idea. With features such as advanced analytics, and custom tools it can be tempting to include all of these, so it's crucial to proritize key features. 
+* If the UI does not properly validate user inputs (like incorrect formats or missing data), this can lead to errors in the backend or incorrect data processing, affecting the overall system reliability. 
 ### External Feedback
 * We will be processing external feedback the week of December 6th, which is basically after we have most of our product finished. We do this then because at that point, we have everything set up and we are able to easily incorporate feedback that doesnt fundamentally change how our program works. We would incorporate things that would potentially require us to retrain our models, but that would probably be the most significant. 
 ## 7. Software Architecture
@@ -181,11 +181,15 @@ Extensions:
 * Retrieve player data for draft.
 ### Data
 * Use SQLite database to store NBA player data.
+* A table contains a list of players, each with their associated Name, Team, Games played, Points, Rebounds, Assists, Steals, Blocks, Field Goal%, Free Throw%, and Number of 3 pointers made. 
 ### Assumptions
 * Assume the structure of the website (Basketball Reference) where the data is from is consistent.
 ### Alternative
 * Instead of web scraping we can use an API to get the data. Pros are more reliable and stable data source. Cons are it is hard to get and could have usage limits.
+<<<<<<< Updated upstream
 * Instead of using SQLite we could use MongoDB as the database system. Pros are it can handle large amonts of data and high traffic load. Cons are uses more memory and storage space and harder to use. 
+=======
+>>>>>>> Stashed changes
 ## 8. Software Design
 * We will be using conda and its preinstalled packages, mainly BeautifulSoup4, Pandas, Sqlite3, requests, and numpy. We will also be using Pytorch for our ML models. 
     * We use BeautifulSoup4, Pandas, Sqlite, and requests for the database management and creation.
