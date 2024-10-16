@@ -186,10 +186,7 @@ Extensions:
 * Assume the structure of the website (Basketball Reference) where the data is from is consistent.
 ### Alternative
 * Instead of web scraping we can use an API to get the data. Pros are more reliable and stable data source. Cons are it is hard to get and could have usage limits.
-<<<<<<< Updated upstream
 * Instead of using SQLite we could use MongoDB as the database system. Pros are it can handle large amonts of data and high traffic load. Cons are uses more memory and storage space and harder to use. 
-=======
->>>>>>> Stashed changes
 ## 8. Software Design
 * We will be using conda and its preinstalled packages, mainly BeautifulSoup4, Pandas, Sqlite3, requests, and numpy. We will also be using Pytorch for our ML models. 
     * We use BeautifulSoup4, Pandas, Sqlite, and requests for the database management and creation.
