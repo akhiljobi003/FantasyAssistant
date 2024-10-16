@@ -175,7 +175,17 @@ Extensions:
 ### Components
 * Database to store player data and to train our ML models off of. 
 * ML models to predict game outcomes and an LLM model to assist users when drafting. 
-* Python code to draft players, predict game outcomes, use our LLM, and generate insights for the user on players. 
+* Python code to draft players, predict game outcomes, use our LLM, and generate insights for the user on players.
+### Interface
+* Call setup database at the start to ensure database is up to date.
+* Retrieve player data for draft.
+### Data
+* Use SQLite database to store NBA player data.
+### Assumptions
+* Assume the structure of the website (Basketball Reference) where the data is from is consistent.
+### Alternative
+* Instead of web scraping we can use an API to get the data. Pros are more reliable and stable data source. Cons are it is hard to get and could have usage limits.
+* 
 ## 8. Software Design
 * We will be using conda and its preinstalled packages, mainly BeautifulSoup4, Pandas, Sqlite3, requests, and numpy. We will also be using Pytorch for our ML models. 
     * We use BeautifulSoup4, Pandas, Sqlite, and requests for the database management and creation.
