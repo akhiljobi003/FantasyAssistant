@@ -1,4 +1,4 @@
-from databse import setup_database
+from database import setup_database
 from draft import draft_players
 
 if __name__ == "__main__":

@@ -10,6 +10,8 @@
 ### Communication Channels 
 * FantasyAssistant Discord Channel 
 ## 2. Product Description 
+### Description:
+* This project plans to create an assistant for fantasy sports drafting. It will include a way to create teams and model the drafting process, while including an LLM to give recommendations to users for players to pick. It will also include an algorithm to predict the outcome of games given two teams. 
 ### Major Features: 
 * Team creation/drafting simulation 
 * Outcome prediction 
@@ -151,6 +153,8 @@ Extensions:
 * Akhil's role is the Database Manager, his job is to create and manage the database and datasystems. He has to make sure the data is up to date and accurate, and the developers can understand how to integrate data and ensure data consistency across systems. He chose this role because it is a crucial part of this project since we will be using a lot of data from various different databases, and he can grow his knowledge about implementing effective database queries. The team needs this role filled because this project revolves around efficiently managing vast amounts of data, and a database manager ensure data consistency and accuracy.
 * Mahir's role is the Frontend Developer, responsible for creating the interface that the user interacts with in the program. His job is to design and implement a simple UI that asks for input, ensuring that the user experience is intuitive and smooth. The team needs this role filled because the success of the project depends on having a user-friendly interface that facilitates interaction with the system.
 * Syed's role is the Backend developer, his job is to create the way that our program responds to the input from the user. 
+### Documentation Plan
+
 ### Schedule
 * Developer's Schedule
     * Create system infrastructure by October 4th.
@@ -163,5 +167,18 @@ Extensions:
 * Another potential risk has to do with the data being inacurrate or outdated which could lead to bad recommendations. Even if a player is injured or traded and the data isn't updated, it can make our system unreliable.
 * Another risk can be trying to add too much features to our product which can lead us to missed deadline and losing focus on the main idea. With features such as advanced analytics, and custom tools it can be tempting to include all of these, so it's crucial to proritize key features.
 * If the UI does not properly validate user inputs (like incorrect formats or missing data), this can lead to errors in the backend or incorrect data processing, affecting the overall system reliability.
+### Risk assessment
+
 ### External Feedback
 * We will be processing external feedback the week of December 6th, which is basically after we have most of our product finished. We do this then because at that point, we have everything set up and we are able to easily incorporate feedback that doesnt fundamentally change how our program works. We would incorporate things that would potentially require us to retrain our models, but that would probably be the most significant. 
+## 7. Software Architecture
+### Components
+* Database to store player data and to train our ML models off of. 
+* ML models to predict game outcomes and an LLM model to assist users when drafting. 
+* Python code to draft players, predict game outcomes, use our LLM, and generate insights for the user on players. 
+## 8. Software Design
+* We will be using conda and its preinstalled packages, mainly BeautifulSoup4, Pandas, Sqlite3, requests, and numpy. We will also be using Pytorch for our ML models. 
+    * We use BeautifulSoup4, Pandas, Sqlite, and requests for the database management and creation.
+    * We use Pytorch, pandas, and numpy for our ML models.
+## 9. Coding Guideline
+We plan on following the [PEP 8 Python Style](https://peps.python.org/pep-0008) for coding our assignment. 

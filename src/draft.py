@@ -1,4 +1,4 @@
-from databse import get_player_data, setup_database
+from database import get_player_data, setup_database
 
 
 def calculate_player_score(player):
