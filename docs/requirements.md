@@ -140,19 +140,19 @@ Extensions:
 * When drafting, a user may attempt to draft a player by inputting their name in the “FirstName, LastName” format.  
 * When drafting, a user may attempt to trade a player by inputting “trade Player1 Player2”. 
 * If a user’s input does not match any of the previous inputs, then the user will be notified, and they will continue drafting.  
-* The product should be a basic python script with a few extra files/folders attached to make it easily runnable.  
+* The product should be a basic Python script with a few extra files/folders attached to make it easily runnable.  
 ## 6. Team Process Description  
 ### Tools
 * Tools we are going to be using includes Python, Pytorch, LLM packages, and Data Science packages, as well as PostgreSQL for our database. 
     * We will be using Python because it is the easiest programming language for what we are trying to accomplish. 
     * We will be using Pytorch, LLM packages, and Data Science packages to make it easier to implement the things they are associated with, so that we don't have to create the things from scratch. 
-    * We will be using PostgreSQL for our database because its easy and open source. It's starting to become an industry standard. 
+    * We will be using PostgreSQL for our database because it's easy and open-source. It's starting to become an industry standard. 
 ### Team member roles
 * Lily's role is the Product Owner, her job is to help define what goes into the product. She also is helping with development where she can. She chose this role because she was the one to pitch this product, so she already had a view for what the product would be. The team needs this role filled to have a solid way forward and a solid list of goals for development. 
-* Yohanse's role is the Scrummaster, his job is to help the developers be able to do what they need to do. He will try to find ways to solve problems that occurs during the process of building our project.
-* Akhil's role is the Database Manager, his job is to create and manage the database and datasystems. He has to make sure the data is up to date and accurate, and the developers can understand how to integrate data and ensure data consistency across systems. He chose this role because it is a crucial part of this project since we will be using a lot of data from various different databases, and he can grow his knowledge about implementing effective database queries. The team needs this role filled because this project revolves around efficiently managing vast amounts of data, and a database manager ensure data consistency and accuracy.
-* Mahir's role is the Frontend Developer, responsible for creating the interface that the user interacts with in the program. His job is to design and implement a simple UI that asks for input, ensuring that the user experience is intuitive and smooth. The team needs this role filled because the success of the project depends on having a user-friendly interface that facilitates interaction with the system.
-* Syed's role is the Backend developer, his job is to create the way that our program responds to the input from the user. 
+* Yohanse's role is the ScrumMaster, his job is to help the developers be able to do what they need to do. He will try to find ways to solve problems that occur during the process of building our project.
+* Akhil's role is the Database Manager, his job is to create and manage the database and data systems. He has to make sure the data is up to date and accurate, and the developers can understand how to integrate data and ensure data consistency across systems. He chose this role because it is a crucial part of this project since we will be using a lot of data from various different databases, and he can grow his knowledge about implementing effective database queries. The team needs this role filled because this project revolves around efficiently managing vast amounts of data, and a database manager ensures data consistency and accuracy.
+* Mahir's role is the front-end developer, responsible for creating the interface that the user interacts with in the program. His job is to design and implement a simple UI that asks for input, ensuring that the user experience is intuitive and smooth. The team needs this role filled because the success of the project depends on having a user-friendly interface that facilitates interaction with the system.
+* Syed's role is the Backend developer, his job is to create the way that our program responds to the input from the user.
 ### Documentation Plan
 * Within the Docs folder, we will create a guide.md file which is a guide for the functionality for the user. 
     * Includes examples of importing drafts, and running drafts
@@ -166,19 +166,20 @@ Extensions:
     * Process external feedback December 6th.
 ### Risks
 * The biggest risk has to do with our data. If we don't have a good dataset or way of storing our data, our product just can't really work well or in some cases even at all. 
-* Another potential risk has to do with the data being inacurrate or outdated which could lead to bad recommendations. Even if a player is injured or traded and the data isn't updated, it can make our system unreliable. 
-* Another risk can be trying to add too much features to our product which can lead us to missed deadline and losing focus on the main idea. With features such as advanced analytics, and custom tools it can be tempting to include all of these, so it's crucial to proritize key features. 
-* If the UI does not properly validate user inputs (like incorrect formats or missing data), this can lead to errors in the backend or incorrect data processing, affecting the overall system reliability. 
+* Another potential risk has to do with the data being inaccurate or outdated which could lead to bad recommendations. Even if a player is injured or traded and the data isn't updated, it can make our system unreliable. 
+* Another risk can be trying to add too many features to our product which can lead us to missed deadline and lose focus on the main idea. With features such as advanced analytics, and custom tools it can be tempting to include all of these, so it's crucial to prioritize key features. 
+* If the UI does not properly validate user inputs (like incorrect formats or missing data), this can lead to errors in the backend or incorrect data processing, affecting the overall system reliability.
+* Another potential risk would not getting stats of the players
 ### External Feedback
-* We will be processing external feedback the week of December 6th, which is basically after we have most of our product finished. We do this then because at that point, we have everything set up and we are able to easily incorporate feedback that doesnt fundamentally change how our program works. We would incorporate things that would potentially require us to retrain our models, but that would probably be the most significant. 
+* We will be processing external feedback the week of December 6th, which is basically after we have most of our product finished. We do this then because at that point, we have everything set up and we are able to easily incorporate feedback that doesn't fundamentally change how our program works. We would incorporate things that would potentially require us to retrain our models, but that would probably be the most significant. 
 ## 7. Software Architecture
 ### Components
 * Database to store player data and to train our ML models off of. 
 * ML models to predict game outcomes and an LLM model to assist users when drafting. 
 * Python code to draft players, predict game outcomes, use our LLM, and generate insights for the user on players.
 ### Interface
-* Call setup database at the start to ensure database is up to date.
-* Retrieve player data for draft.
+* Call setup database at the start to ensure the database is up to date.
+* Retrieve player data for the draft.
 ### Data
 * Use SQLite database to store NBA player data.
 * A table contains a list of players, each with their associated Name, Team, Games played, Points, Rebounds, Assists, Steals, Blocks, Field Goal%, Free Throw%, and Number of 3 pointers made. 
@@ -186,13 +187,18 @@ Extensions:
 * Assume the structure of the website (Basketball Reference) where the data is from is consistent.
 ### Alternative
 * Instead of web scraping we can use an API to get the data. Pros are more reliable and stable data source. Cons are it is hard to get and could have usage limits.
-* Instead of using SQLite we could use MongoDB as the database system. Pros are it can handle large amonts of data and high traffic load. Cons are uses more memory and storage space and harder to use. 
+* Instead of using SQLite we could use MongoDB as the database system. Pros are it can handle large amounts of data and high traffic load. Cons are uses more memory and storage space and harder to use. 
 ## 8. Software Design
 * We will be using conda and its preinstalled packages, mainly BeautifulSoup4, Pandas, Sqlite3, requests, and numpy. We will also be using Pytorch for our ML models. 
-    * We use BeautifulSoup4, Pandas, Sqlite, and requests for the database management and creation.
-    * We use Pytorch, pandas, and numpy for our ML models.
+    * We use BeautifulSoup4, Pandas, Sqlite, and requests for database management and creation.
+    * We use Pytorch, pandas, and Numpy for our ML models.
 ## 9. Coding Guideline
-We plan on following the [PEP 8 Python Style](https://peps.python.org/pep-0008) for coding our assignment. PEP 8 us the official style guide for Python and is widely used across the Python community. PEP 8 emphasizes code readability, which aligns well with Python's philosophy of creating clear and understandable code.
+We plan to code our assignment following the [PEP 8 Python Style](https://peps.python.org/pep-0008). PEP 8 is the official style guide for Python and is widely used across the Python community. PEP 8 emphasizes code readability, which aligns well with Python's philosophy of creating clear and understandable code.
 ## 10. Process description
 ### Risk Assessment
-* 
+* The likelihood of our dataset not having a good dataset would be medium and the impact will be medium too since it wouldn't be a quality data as we hoped to get. we are carefully collecting the dataset to reduce the likelihood of it happening. We are planning to mitigate the risk by picking and cleaning the dataset.
+* The likelihood of our data being outdated will be low since we can get updated data. If it occurs the impact would be high because we are not going to be assisting the fantasy managers with updated data, which might lead them to get low potential fantasy scores due to the quality of the data. We are going to reduce, mitigate, or avoid this by getting updated data.
+* The likelihood of adding too many features in order to please our customers(fantasy managers) would be medium because we might be tempted to do it in order to gain more customers. The impact if it occurs would be high as it takes more of our time leading us to not deliver on time. The steps we are taking to reduce the impact are to just make the basics first and then add the additional features later on if we have enough time. Plan to detect the problem is just as easy as tracking our progress and time management. If it occurs mitigation plan is to work overtime to deliver the full product.
+* The likelihood of the UI not validating user input would be low but it might happen. As long as we work on it carefully we believe we will succeed on that part. If it occurs as we said it could lead to errors in the backend and data processing leading to our product malfunction. We haven't done any experiments to know if it is going to happen or not. To reduce the impact we are working on being as accurate as possible on the backend and then working on the front end. The mitigation plan is if it occurs try to fix the bug by going back and checking the code.
+* The last risk likelihood of occurring is very low as there are a lot of stat datasets that we can get from different databases. If it occurs it will skew the quality of assistance we would give to the fantasy manager as it is important to have a player's stat to assist on a specific player. There are lots of resources the potential of this happening is low. To reduce the impact of this happening we will get as many stats as we could to give detailed assistance.  Plan to detect the problem is to check on the player's stat and what is missing then get the missing stat. The mitigation plan should it occur is just to get more stats from different databases to fulfill the need stat for the players.
+
