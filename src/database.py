@@ -8,7 +8,7 @@ def fetch_nba_data():
     """
     Fetch NBA player data from Basketball Reference.
     """
-    url = 'https://www.basketball-reference.com/leagues/NBA_2024_totals.html'
+    url = 'https://www.basketball-reference.com/leagues/NBA_2025_totals.html'
 
     try:
         response = requests.get(url, timeout=10)
