@@ -191,20 +191,20 @@ Justification for GitHub Actions:
 * Seamless integration with our GitHub repository
 * Free for public repositories and generous free tier for private ones
 * Flexible workflow configuration using YAML
-* Extensive marketplace of pre-built actions
+* Extensive marketplace of pre-built actions<br />
 Two CI services we are considering were GitHub Actions and Travis CI
-Pros
+Pros<br />
 GitHub Action:
 * Native GitHub integration
 * Free for public repos
-* Large marketplace of actions
+* Large marketplace of actions<br />
 Travis CI:
 * Simple configuration
-* Good documentation
-Cons
+* Good documentation<br />
+Cons<br />
 GitHub Action:
 * Potentially complex YAML config
-* Limited run time on free tier
+* Limited run time on free tier<br />
 Travis CI:
 * Can be slow for larger projects
 * Limited free tier
