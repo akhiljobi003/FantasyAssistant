@@ -205,9 +205,10 @@ Cons<br />
 GitHub Action:
 * Potentially complex YAML config
 * Limited run time on free tier<br />
-Travis CI:
+# Travis CI:
 * Can be slow for larger projects
 * Limited free tier
+
 ## 7. Software Architecture
 ### Components
 * Database to store player data and to train our ML models off of. 
