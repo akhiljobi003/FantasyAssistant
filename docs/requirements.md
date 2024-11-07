@@ -172,6 +172,35 @@ Extensions:
 * Another potential risk would not getting stats of the players
 ### External Feedback
 * We will be processing external feedback the week of December 6th, which is basically after we have most of our product finished. We do this then because at that point, we have everything set up and we are able to easily incorporate feedback that doesn't fundamentally change how our program works. We would incorporate things that would potentially require us to retrain our models, but that would probably be the most significant.
+## 7. Software Architecture
+### Components
+* Database to store player data and to train our ML models off of. 
+* ML models to predict game outcomes and an LLM model to assist users when drafting. 
+* Python code to draft players, predict game outcomes, use our LLM, and generate insights for the user on players.
+### Interface
+* Call setup database at the start to ensure the database is up to date.
+* Retrieve player data for the draft.
+### Data
+* Use SQLite database to store NBA player data.
+* A table contains a list of players, each with their associated Name, Team, Games played, Points, Rebounds, Assists, Steals, Blocks, Field Goal%, Free Throw%, and Number of 3 pointers made. 
+### Assumptions
+* Assume the structure of the website (Basketball Reference) where the data is from is consistent.
+### Alternative
+* Instead of web scraping we can use an API to get the data. Pros are more reliable and stable data source. Cons are it is hard to get and could have usage limits.
+* Instead of using SQLite we could use MongoDB as the database system. Pros are it can handle large amounts of data and high traffic load. Cons are uses more memory and storage space and harder to use. 
+## 8. Software Design
+* We will be using conda and its preinstalled packages, mainly BeautifulSoup4, Pandas, Sqlite3, requests, and numpy. We will also be using Pytorch for our ML models. 
+    * We use BeautifulSoup4, Pandas, Sqlite, and requests for database management and creation.
+    * We use Pytorch, pandas, and Numpy for our ML models.
+## 9. Coding Guideline
+We plan to code our assignment following the [PEP 8 Python Style](https://peps.python.org/pep-0008). PEP 8 is the official style guide for Python and is widely used across the Python community. PEP 8 emphasizes code readability, which aligns well with Python's philosophy of creating clear and understandable code.
+## 10. Process description
+### Risk Assessment
+* The likelihood of our dataset not having a good dataset would be medium and the impact will be medium too since it wouldn't be a quality data as we hoped to get. we are carefully collecting the dataset to reduce the likelihood of it happening. We are planning to mitigate the risk by picking and cleaning the dataset.
+* The likelihood of our data being outdated will be low since we can get updated data. If it occurs the impact would be high because we are not going to be assisting the fantasy managers with updated data, which might lead them to get low potential fantasy scores due to the quality of the data. We are going to reduce, mitigate, or avoid this by getting updated data.
+* The likelihood of adding too many features in order to please our customers(fantasy managers) would be medium because we might be tempted to do it in order to gain more customers. The impact if it occurs would be high as it takes more of our time leading us to not deliver on time. The steps we are taking to reduce the impact are to just make the basics first and then add the additional features later on if we have enough time. Plan to detect the problem is just as easy as tracking our progress and time management. If it occurs mitigation plan is to work overtime to deliver the full product.
+* The likelihood of the UI not validating user input would be low but it might happen. As long as we work on it carefully we believe we will succeed on that part. If it occurs as we said it could lead to errors in the backend and data processing leading to our product malfunction. We haven't done any experiments to know if it is going to happen or not. To reduce the impact we are working on being as accurate as possible on the backend and then working on the front end. The mitigation plan is if it occurs try to fix the bug by going back and checking the code.
+* The last risk likelihood of occurring is very low as there are a lot of stat datasets that we can get from different databases. If it occurs it will skew the quality of assistance we would give to the fantasy manager as it is important to have a player's stat to assist on a specific player. There are lots of resources the potential of this happening is low. To reduce the impact of this happening we will get as many stats as we could to give detailed assistance.  Plan to detect the problem is to check on the player's stat and what is missing then get the missing stat. The mitigation plan should it occur is just to get more stats from different databases to fulfill the need stat for the players.
 ### Test-automation
 We will use Pytest as our test automation framework for the project.<br />
 Justification for Pytest:
@@ -219,33 +248,3 @@ A CI build will be triggered by the following development actions:
 * Push to any branch
 * Pull request creation or update
 * Scheduled daily builds on the main branch
-## 7. Software Architecture
-### Components
-* Database to store player data and to train our ML models off of. 
-* ML models to predict game outcomes and an LLM model to assist users when drafting. 
-* Python code to draft players, predict game outcomes, use our LLM, and generate insights for the user on players.
-### Interface
-* Call setup database at the start to ensure the database is up to date.
-* Retrieve player data for the draft.
-### Data
-* Use SQLite database to store NBA player data.
-* A table contains a list of players, each with their associated Name, Team, Games played, Points, Rebounds, Assists, Steals, Blocks, Field Goal%, Free Throw%, and Number of 3 pointers made. 
-### Assumptions
-* Assume the structure of the website (Basketball Reference) where the data is from is consistent.
-### Alternative
-* Instead of web scraping we can use an API to get the data. Pros are more reliable and stable data source. Cons are it is hard to get and could have usage limits.
-* Instead of using SQLite we could use MongoDB as the database system. Pros are it can handle large amounts of data and high traffic load. Cons are uses more memory and storage space and harder to use. 
-## 8. Software Design
-* We will be using conda and its preinstalled packages, mainly BeautifulSoup4, Pandas, Sqlite3, requests, and numpy. We will also be using Pytorch for our ML models. 
-    * We use BeautifulSoup4, Pandas, Sqlite, and requests for database management and creation.
-    * We use Pytorch, pandas, and Numpy for our ML models.
-## 9. Coding Guideline
-We plan to code our assignment following the [PEP 8 Python Style](https://peps.python.org/pep-0008). PEP 8 is the official style guide for Python and is widely used across the Python community. PEP 8 emphasizes code readability, which aligns well with Python's philosophy of creating clear and understandable code.
-## 10. Process description
-### Risk Assessment
-* The likelihood of our dataset not having a good dataset would be medium and the impact will be medium too since it wouldn't be a quality data as we hoped to get. we are carefully collecting the dataset to reduce the likelihood of it happening. We are planning to mitigate the risk by picking and cleaning the dataset.
-* The likelihood of our data being outdated will be low since we can get updated data. If it occurs the impact would be high because we are not going to be assisting the fantasy managers with updated data, which might lead them to get low potential fantasy scores due to the quality of the data. We are going to reduce, mitigate, or avoid this by getting updated data.
-* The likelihood of adding too many features in order to please our customers(fantasy managers) would be medium because we might be tempted to do it in order to gain more customers. The impact if it occurs would be high as it takes more of our time leading us to not deliver on time. The steps we are taking to reduce the impact are to just make the basics first and then add the additional features later on if we have enough time. Plan to detect the problem is just as easy as tracking our progress and time management. If it occurs mitigation plan is to work overtime to deliver the full product.
-* The likelihood of the UI not validating user input would be low but it might happen. As long as we work on it carefully we believe we will succeed on that part. If it occurs as we said it could lead to errors in the backend and data processing leading to our product malfunction. We haven't done any experiments to know if it is going to happen or not. To reduce the impact we are working on being as accurate as possible on the backend and then working on the front end. The mitigation plan is if it occurs try to fix the bug by going back and checking the code.
-* The last risk likelihood of occurring is very low as there are a lot of stat datasets that we can get from different databases. If it occurs it will skew the quality of assistance we would give to the fantasy manager as it is important to have a player's stat to assist on a specific player. There are lots of resources the potential of this happening is low. To reduce the impact of this happening we will get as many stats as we could to give detailed assistance.  Plan to detect the problem is to check on the player's stat and what is missing then get the missing stat. The mitigation plan should it occur is just to get more stats from different databases to fulfill the need stat for the players.
-
