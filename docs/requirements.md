@@ -207,14 +207,14 @@ GitHub Action:
 * Limited run time on free tier<br />
 Travis CI:
 * Can be slow for larger projects
-* Limited free tier
-CI Build Execution:
+* Limited free tier<br />
+CI Build Execution:<br />
 The following tests will be executed in each CI build:
 * Unit tests
 * Integration tests
 * Linting checks (using flake8)
-* Type checking (using mypy)
-CI Build Triggers:
+* Type checking (using mypy)<br />
+CI Build Triggers:<br />
 A CI build will be triggered by the following development actions:
 * Push to any branch
 * Pull request creation or update
