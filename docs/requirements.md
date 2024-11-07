@@ -173,13 +173,26 @@ Extensions:
 ### External Feedback
 * We will be processing external feedback the week of December 6th, which is basically after we have most of our product finished. We do this then because at that point, we have everything set up and we are able to easily incorporate feedback that doesn't fundamentally change how our program works. We would incorporate things that would potentially require us to retrain our models, but that would probably be the most significant.
 ### Test-automation
-* We will use Pytest as our test automation framework for the project.<br />
+We will use Pytest as our test automation framework for the project.<br />
 Justification for Pytest:
 * Python-native, aligning with our primary development language
-* Extensive plugin ecosystem for enhanced functionality
 * Simple syntax for writing and organizing tests
 * Built-in fixtures for efficient test setup and teardown
 * Excellent support for parameterized testing
+Adding a New Test:
+* Create a new Python file in the tests/ directory
+* Import the necessary modules and the code to be tested
+* Write test functions, prefixing them with test_
+* Use Pytest assertions to verify expected outcomes
+* Run pytest command to execute the new test along with existing ones
+### Continuous Integration (CI)
+We will use GitHub Actions as our CI service, directly integrated with our GitHub repository.
+Justification for GitHub Actions:
+* Seamless integration with our GitHub repository
+* Free for public repositories and generous free tier for private ones
+* Flexible workflow configuration using YAML
+* Extensive marketplace of pre-built actions
+
 ## 7. Software Architecture
 ### Components
 * Database to store player data and to train our ML models off of. 
