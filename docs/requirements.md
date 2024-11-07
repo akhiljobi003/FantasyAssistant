@@ -186,13 +186,28 @@ Adding a New Test:
 * Use Pytest assertions to verify expected outcomes
 * Run pytest command to execute the new test along with existing ones
 ### Continuous Integration (CI)
-We will use GitHub Actions as our CI service, directly integrated with our GitHub repository.
+We will use GitHub Actions as our CI service, directly integrated with our GitHub repository.<br />
 Justification for GitHub Actions:
 * Seamless integration with our GitHub repository
 * Free for public repositories and generous free tier for private ones
 * Flexible workflow configuration using YAML
 * Extensive marketplace of pre-built actions
-
+Two CI services we are considering were GitHub Actions and Travis CI
+Pros
+GitHub Action:
+* Native GitHub integration
+* Free for public repos
+* Large marketplace of actions
+Travis CI:
+* Simple configuration
+* Good documentation
+Cons
+GitHub Action:
+* Potentially complex YAML config
+* Limited run time on free tier
+Travis CI:
+* Can be slow for larger projects
+* Limited free tier
 ## 7. Software Architecture
 ### Components
 * Database to store player data and to train our ML models off of. 
