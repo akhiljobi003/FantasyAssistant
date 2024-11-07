@@ -171,7 +171,15 @@ Extensions:
 * If the UI does not properly validate user inputs (like incorrect formats or missing data), this can lead to errors in the backend or incorrect data processing, affecting the overall system reliability.
 * Another potential risk would not getting stats of the players
 ### External Feedback
-* We will be processing external feedback the week of December 6th, which is basically after we have most of our product finished. We do this then because at that point, we have everything set up and we are able to easily incorporate feedback that doesn't fundamentally change how our program works. We would incorporate things that would potentially require us to retrain our models, but that would probably be the most significant. 
+* We will be processing external feedback the week of December 6th, which is basically after we have most of our product finished. We do this then because at that point, we have everything set up and we are able to easily incorporate feedback that doesn't fundamentally change how our program works. We would incorporate things that would potentially require us to retrain our models, but that would probably be the most significant.
+### Test-automation
+* We will use Pytest as our test automation framework for the project.
+Justification for Pytest:
+* Python-native, aligning with our primary development language
+* Extensive plugin ecosystem for enhanced functionality
+* Simple syntax for writing and organizing tests
+* Built-in fixtures for efficient test setup and teardown
+* Excellent support for parameterized testing
 ## 7. Software Architecture
 ### Components
 * Database to store player data and to train our ML models off of. 
