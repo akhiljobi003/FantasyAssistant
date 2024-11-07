@@ -202,27 +202,27 @@ We plan to code our assignment following the [PEP 8 Python Style](https://peps.p
 * The likelihood of the UI not validating user input would be low but it might happen. As long as we work on it carefully we believe we will succeed on that part. If it occurs as we said it could lead to errors in the backend and data processing leading to our product malfunction. We haven't done any experiments to know if it is going to happen or not. To reduce the impact we are working on being as accurate as possible on the backend and then working on the front end. The mitigation plan is if it occurs try to fix the bug by going back and checking the code.
 * The last risk likelihood of occurring is very low as there are a lot of stat datasets that we can get from different databases. If it occurs it will skew the quality of assistance we would give to the fantasy manager as it is important to have a player's stat to assist on a specific player. There are lots of resources the potential of this happening is low. To reduce the impact of this happening we will get as many stats as we could to give detailed assistance.  Plan to detect the problem is to check on the player's stat and what is missing then get the missing stat. The mitigation plan should it occur is just to get more stats from different databases to fulfill the need stat for the players.
 ### Test-automation
-We will use unittest as our test automation framework for the project.<br />
-Justification for unittest
+**We will use unittest as our test automation framework for the project.**
+#### Justification for unittest
 * We chose unittest for the following reasons:
 * It's built into Python, requiring no additional installation
 * It provides a rich set of assertions for thorough testing
 * It supports test discovery, making it easy to run all tests
-Adding a New Test:
-* Create a new Python file in the tests directory, naming it test_<feature>.py
+#### Adding a New Test:
+* Create a new Python file in the tests directory, naming it <feature>_test.py
 * Import the unittest module and the code to be tested
 * Create a class that inherits from unittest.TestCase
 * Write test methods within this class, naming them test_<specific_functionality>
 * Use unittest assertions to verify expected behavior
 ### Continuous Integration (CI)
-We will use GitHub Actions as our CI service, directly integrated with our GitHub repository.<br />
-Justification for GitHub Actions:
+**We will use GitHub Actions as our CI service, directly integrated with our GitHub repository.**
+#### Justification for GitHub Actions:
 * Seamless integration with our GitHub repository
 * Free for public repositories and generous free tier for private ones
 * Flexible workflow configuration using YAML
-* Extensive marketplace of pre-built actions<br />
-Two CI services we are considering were GitHub Actions and Travis CI
-Pros<br />
+* Extensive marketplace of pre-built actions
+#### Two CI services we are considering were GitHub Actions and Travis CI
+##### Pros
 GitHub Action:
 * Native GitHub integration
 * Free for public repos
@@ -230,20 +230,20 @@ GitHub Action:
 Travis CI:
 * Simple configuration
 * Good documentation<br />
-Cons<br />
+##### Cons
 GitHub Action:
 * Potentially complex YAML config
 * Limited run time on free tier<br />
 Travis CI:
 * Can be slow for larger projects
 * Limited free tier<br />
-CI Build Execution:<br />
+#### CI Build Execution:
 The following tests will be executed in each CI build:
 * Unit tests
 * Integration tests
 * Linting checks (using flake8)
 * Type checking (using mypy)<br />
-CI Build Triggers:<br />
+#### CI Build Triggers:
 A CI build will be triggered by the following development actions:
 * Push to any branch
 * Pull request creation or update
