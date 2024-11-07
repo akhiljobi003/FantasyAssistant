@@ -173,7 +173,7 @@ Extensions:
 ### External Feedback
 * We will be processing external feedback the week of December 6th, which is basically after we have most of our product finished. We do this then because at that point, we have everything set up and we are able to easily incorporate feedback that doesn't fundamentally change how our program works. We would incorporate things that would potentially require us to retrain our models, but that would probably be the most significant.
 ### Test-automation
-* We will use Pytest as our test automation framework for the project.
+* We will use Pytest as our test automation framework for the project.<br />
 Justification for Pytest:
 * Python-native, aligning with our primary development language
 * Extensive plugin ecosystem for enhanced functionality
